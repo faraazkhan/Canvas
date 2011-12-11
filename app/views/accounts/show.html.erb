@@ -1,0 +1,62 @@
+<% content_for :page_title do %><%= @account.name %><% end %>
+<%
+  @active_tab = "courses"
+  add_crumb t(:courses_crumb, "Courses"), account_path(@account)
+%>
+<% content_for :right_side do %>
+  <%= render :partial => 'courses_right_side' %>
+<% end %>
+
+
+<h2><%= t(:title, "Courses In This Account") %></h2>
+<% if @associated_courses_count > 0 %>
+  <% if @term %>
+    <h3 style="margin-bottom: 1em;"><%= mt(:subtitle_term, "For the term **%{term}**", :term => @term.name) %></h3>
+  <% end %>
+  <% if @associated_courses_count > @maximum_courses_im_gonna_show %>
+    <p class='ui-state-highlight' style='padding:0.7em;'>
+      <%= t(:too_many_courses_message, { :other => "There are too many courses to show (%{count}). " +
+      "Please use the finder on the right to find a specific course." }, :count => @associated_courses_count) %>
+    </p>
+  <% end %>
+
+  <ul class='courses' style="list-style-type: none;">
+    
+    <%= render :partial => "course", :collection => @courses %>
+    <%= render :partial => "course" %>
+  </ul>  
+</div>
+<% else %>
+  <h3><%= @root_account.enrollment_terms.active.count > 1 ?
+          t(:no_courses_term_message, "There are no courses in this term") :
+          t(:no_courses_account_message, "There are no courses in this account") %></h3>
+  <ul class='courses' style="list-style-type: none;">
+    <%= render :partial => "course" %>
+  </ul>
+<% end %>
+<% js_block do %>
+<script type="text/javascript">
+$(document).ready(function() {
+  
+  $(".courses .course,.groups .group").bind('focus mouseover', function(event) {
+    $(this).find(".info").addClass('info_hover');
+  });
+  $(".courses .course,.groups .group").bind('blur mouseout', function(event) {
+    $(this).find(".info").removeClass('info_hover');
+  });
+  if($("#new_course").length > 0) {
+    var reEscape = new RegExp('(\\' + ['/', '.', '*', '+', '?', '|', '(', ')', '[', ']', '{', '}', '\\'].join('|\\') + ')', 'g');
+    var $newCourseForm = $("#new_course"),
+        $courseName = $("#course_name");
+    $courseName.autocomplete({
+      minLength: 4,
+      delay: 150, //miliseconds
+      source: $newCourseForm[0].action + ".json",
+      select: function(event, ui){
+        window.location = $newCourseForm[0].action + "/" + ui.item.id
+      }
+    });
+  }
+});
+</script>
+<% end %>
