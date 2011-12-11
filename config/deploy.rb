@@ -5,9 +5,9 @@ set :scm, "git"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :deploy_to, "/var/www/lms.rationalizeitconsulting.com"
 
-role :web, "lms.rationalizeitconsulting.com"
-role :app, "lms.rationalizeitconsulting.com"
-role :db,  "mysql.rationalizeitconsulting.com", :primary => true # This is where Rails migrations will run
+role :web, "sadachbia.dreamhost.com"
+role :app, "sadachbia.dreamhost.com"
+role :db,  "sadachbia.dreamhost.com", :primary => true # This is where Rails migrations will run
 #role :db,  "your slave db-server here"
 set :user, "faraazkhan"
 set :use_sudo, false
