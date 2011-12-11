@@ -95,6 +95,7 @@ end
 
 # The closure-compiler gem has an undocumented
 # gem dependency on windows with ruby < 1.9.  I'm
+# I am not on windows
 # working to get this fixed in the gem itself, but
 # in the mean time this needs to be here to make
 # things work on windows.
