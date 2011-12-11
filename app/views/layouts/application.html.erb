@@ -193,11 +193,6 @@
       </div>
     </div>
     <footer role="contentinfo" id="footer">
-      <a href="http://www.instructure.com"><%= image_tag 'footer-logo.png', :alt => t('instructure_description', "Instructure, makers of the open source learning management system Canvas") %></a>
-      <span id="footer-links">
-        <% if Setting.get_cached("show_opensource_linkback", "false") == "true" %>
-          <a href="http://instructure.com"><%= t('open_source_learning_management_system', 'Open Source LMS') %></a>      
-        <% end %>
         <% if url = ((@domain_root_account && @domain_root_account.settings[:support_url]) || (Account.default && Account.default.settings[:support_url])) %>
           <%= link_to(t('links.support', "Support"), url) %>
         <% end %>
