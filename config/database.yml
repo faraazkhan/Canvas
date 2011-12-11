@@ -1,0 +1,32 @@
+
+mysql_common: &mysql
+  adapter: mysql
+  encoding: utf8
+  host: localhost
+  socket: <% `mysql_config --socket`.strip %>
+  username: root
+  password: password
+
+development:
+  <<: *mysql
+  database: canvas_development
+  queue: 
+      <<: *mysql
+      database: canvas_queue_development 
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *mysql
+  database: canvas_test
+  db_dump_path: /tmp
+  
+
+production:
+  <<: *mysql
+  database: canvas_development
+  queue:
+      <<: *mysql
+      database: canvas_queue_development
+# no db_dump_path for produ

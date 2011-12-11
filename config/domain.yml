@@ -1,0 +1,9 @@
+development:
+  domain: "localhost:3000"
+
+production:
+  domain: "learn.betterbusinessnalysis.com"
+  # files_domain: "canvasfiles.example.com"
+
+# don't set a domain for the test environment, this is handled automatically by
+# the specs
