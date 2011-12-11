@@ -1,0 +1,9 @@
+production:
+  # replace this with a random string of at least 20 characters
+  encryption_key: 123456789123456789123456789
+  
+development:
+  encryption_key: 123456789123456789123456789
+     
+test:
+  encryption_key: 12345
