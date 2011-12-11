@@ -36,7 +36,7 @@ $(function(){
 <% form_for @context, :html => { :id => 'setup_course_form' } do |form| %>
   <div style="text-align: left; margin-left: 50px; margin-top: 10px; width: auto; position: relative;" id="course_name_div">
     <% if @context.teacherless? %>
-      <p><%= t :teacherless_grades_notice, "You can use Canvas to keep track of how you're doing in all your courses, whether they're using Canvas or not. Just tell us how your course's grading policy is set up and then enter your scores manually. You can also invite your classmates to use the course you set up so they can track their grades, too!" %></p>
+      <p><%= t :teacherless_grades_notice, "You can use the Better Business Analysis LMS to keep track of how you're doing in all your courses, whether they're using the LMS or not. Just tell us how your course's grading policy is set up and then enter your scores manually. You can also invite your classmates to use the course you set up so they can track their grades, too!" %></p>
     <% end %>
     <div>
       <%= form.blabel :name, :en => "Enter a name for your course", :style => "font-weight: bold; font-size: 1.2em; display: block;" %>

@@ -143,7 +143,7 @@ class CalendarsController < ApplicationController
     end
     respond_to do |format|
       format.ics do
-        render :text => @events.to_ics(t('ics_title', "%{course_or_group_name} Calendar (Canvas)", :course_or_group_name => @context.name),
+        render :text => @events.to_ics(t('ics_title', "%{course_or_group_name} Calendar (Better Business Analysis)", :course_or_group_name => @context.name),
           case
             when @context.is_a?(Course)
               t('ics_description_course', "Calendar events for the course, %{course_name}", :course_name => @context.name)

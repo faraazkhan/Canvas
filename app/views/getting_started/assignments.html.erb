@@ -40,7 +40,7 @@
 </div>
 <% if @groups.length == 1 %>
   <% if @context.teacherless? %>
-    <p style="margin-top: 30px;"><%= t :grade_groups_notice, "Nicely done. Next you'll want to define the assignments for your course. Most classes base grades either on straight points, or points according to types (50% of your grade is from tests, 20% is from papers, etc.). In Canvas you add assignments, quizzes, or whatever into groups and optionally weight those groups. Build your Canvas course to match the grading scheme of your actual course, and we'll take care of computing your final grade for you." %></p>
+    <p style="margin-top: 30px;"><%= t :grade_groups_notice, "Nicely done. Next you'll want to define the assignments for your course. Most classes base grades either on straight points, or points according to types (50% of your grade is from tests, 20% is from papers, etc.). In the LMS you add assignments, quizzes, or whatever into groups and optionally weight those groups. Build your course to match the grading scheme of your actual course, and we'll take care of computing your final grade for you." %></p>
   <% else %>
     <p style="margin-top: 30px;">
     <%= t :default_group_notice, "*Now we're getting somewhere!* Next you'll want to add
