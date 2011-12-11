@@ -3,7 +3,7 @@ set :repository,  "git@github.com:faraazkhan/canvas.git"
 
 set :scm, "git" 
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-set :deploy_to, "/var/www/lms.rationalizeitconsulting.com"
+set :deploy_to, "home/faraazkhan/lms.rationalizeitconsulting.com/var/www/lms.rationalizeitconsulting.com"
 
 role :web, "sadachbia.dreamhost.com"
 role :app, "sadachbia.dreamhost.com"
