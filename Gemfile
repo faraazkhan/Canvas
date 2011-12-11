@@ -84,6 +84,8 @@ group :development do
   gem 'ya2yaml', '0.30'
   gem 'guard'
   gem 'guard-coffeescript'
+  gem 'passenger'
+  gem 'rb-fsevent'
 end
 
 group :redis do
