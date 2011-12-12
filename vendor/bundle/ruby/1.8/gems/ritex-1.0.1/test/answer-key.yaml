@@ -1,0 +1,233 @@
+--- 
+- - ""
+  - ""
+- - "  a"
+  - <mi>a</mi>
+- - " a"
+  - <mi>a</mi>
+- - (\hat{x}) = {(\hat{x}})
+  - <mo stretchy='false'>(</mo><mover><mrow><mi>x</mi></mrow><mo>&Hat;</mo></mover><mo stretchy='false'>)</mo><mo>=</mo><mrow><mo stretchy='false'>(</mo><mover><mrow><mi>x</mi></mrow><mo>&Hat;</mo></mover></mrow><mo stretchy='false'>)</mo>
+- - ","
+  - <mo>,</mo>
+- - ,\,\,,,\,
+  - <mo>,</mo><mspace width="thinmathspace"/><mspace width="thinmathspace"/><mo>,</mo><mo>,</mo><mspace width="thinmathspace"/>
+- - "-1"
+  - <mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mn>1</mn>
+- - -\infty
+  - <mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mn>&infin;</mn>
+- - -\log(1 - X)/\lambda
+  - <mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mi>log</mi><mo stretchy='false'>(</mo><mn>1</mn><mo>&minus;</mo><mi>X</mi><mo stretchy='false'>)</mo><mo>/</mo><mi>&lambda;</mi>
+- - -x
+  - <mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mi>x</mi>
+- - 100!
+  - <mn>100</mn><mo>!</mo>
+- - F(x) = \Pr(X \leq x)\ \text{for}\ -\infinity < x < \infinity
+  - <mi>F</mi><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mo>=</mo><mi>Pr</mi><mo stretchy='false'>(</mo><mi>X</mi><mo>&leq;</mo><mi>x</mi><mo stretchy='false'>)</mo><mspace width="mediummathspace"/><mtext>for</mtext><mspace width="mediummathspace"/><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mn>&infin;</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>&infin;</mn>
+- - |-
+    G(y) = \left\{\array{ 1 - e^{-\lambda y} & \text{ if } y \geq 0 \\
+                                   0                  & \text{ if } y < 0 }\right.
+  - <mi>G</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd><mn>1</mn><mo>&minus;</mo><msup><mi>e</mi><mrow><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mi>&lambda;</mi><mi>y</mi></mrow></msup></mtd><mtd><mtext> if </mtext><mi>y</mi><mo>&geq;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mtext> if </mtext><mi>y</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow>
+- - G^{-1}(x) = -\log(1 - x)/\lambda\text{ if } 0 < x < 1.
+  - <msup><mi>G</mi><mrow><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mn>1</mn></mrow></msup><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mo>=</mo><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mi>log</mi><mo stretchy='false'>(</mo><mn>1</mn><mo>&minus;</mo><mi>x</mi><mo stretchy='false'>)</mo><mo>/</mo><mi>&lambda;</mi><mtext> if </mtext><mn>0</mn><mo>&lt;</mo><mi>x</mi><mo>&lt;</mo><mn>1</mn><mo>.</mo>
+- - P(x) = P^*(x)/Z
+  - <mi>P</mi><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mo>=</mo><msup><mi>P</mi><mo>*</mo></msup><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mo>/</mo><mi>Z</mi>
+- - \ -\infty
+  - <mspace width="mediummathspace"/><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mn>&infin;</mn>
+- - \,
+  - <mspace width="thinmathspace"/>
+- - \Pr(a < X \leq b) = \int_a^b f(x)\ dx
+  - <mi>Pr</mi><mo stretchy='false'>(</mo><mi>a</mi><mo>&lt;</mo><mi>X</mi><mo>&leq;</mo><mi>b</mi><mo stretchy='false'>)</mo><mo>=</mo><msubsup><mo>&Integral;</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mspace width="mediummathspace"/><mi>d</mi><mi>x</mi>
+- - \alpha
+  - <mi>&alpha;</mi>
+- - \alpha + b + c
+  - <mi>&alpha;</mi><mo>+</mo><mi>b</mi><mo>+</mo><mi>c</mi>
+- - \alpha - x
+  - <mi>&alpha;</mi><mo>&minus;</mo><mi>x</mi>
+- - |-
+    \array{  \colspan{3} (1,1) \text{ to } (1,3) & (1,4) \\
+                         (2,1)  &   (2,2)   &   (2,3)    & (2,4)  }
+  - <mrow><mtable><mtr><mtd columnspan='3'><mo stretchy='false'>(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy='false'>)</mo><mtext> to </mtext><mo stretchy='false'>(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy='false'>)</mo></mtd><mtd><mo stretchy='false'>(</mo><mn>1</mn><mo>,</mo><mn>4</mn><mo stretchy='false'>)</mo></mtd></mtr><mtr><mtd><mo stretchy='false'>(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo stretchy='false'>)</mo></mtd><mtd><mo stretchy='false'>(</mo><mn>2</mn><mo>,</mo><mn>2</mn><mo stretchy='false'>)</mo></mtd><mtd><mo stretchy='false'>(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy='false'>)</mo></mtd><mtd><mo stretchy='false'>(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy='false'>)</mo></mtd></mtr></mtable></mrow>
+- - |-
+    \array{ (1,1) & \rowspan{2} \int dx & (1,3) \\
+                     (2,1) &                       (2,3) \\
+                     (3,1) & (3,2)               & (3,3) }
+  - <mrow><mtable><mtr><mtd><mo stretchy='false'>(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy='false'>)</mo></mtd><mtd rowspan='2'><mo>&Integral;</mo><mi>d</mi><mi>x</mi></mtd><mtd><mo stretchy='false'>(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy='false'>)</mo></mtd></mtr><mtr><mtd><mo stretchy='false'>(</mo><mn>2</mn><mo>,</mo><mn>1</mn><mo stretchy='false'>)</mo></mtd><mtd><mo stretchy='false'>(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy='false'>)</mo></mtd></mtr><mtr><mtd><mo stretchy='false'>(</mo><mn>3</mn><mo>,</mo><mn>1</mn><mo stretchy='false'>)</mo></mtd><mtd><mo stretchy='false'>(</mo><mn>3</mn><mo>,</mo><mn>2</mn><mo stretchy='false'>)</mo></mtd><mtd><mo stretchy='false'>(</mo><mn>3</mn><mo>,</mo><mn>3</mn><mo stretchy='false'>)</mo></mtd></mtr></mtable></mrow>
+- - \array{ \arrayopts{\colalign{left center right}} a & b & c \\ 100000 & 100000 & 10000}
+  - <mrow><mtable columnalign="left center right"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mn>100000</mn></mtd><mtd><mn>100000</mn></mtd><mtd><mn>10000</mn></mtd></mtr></mtable></mrow>
+- - \array{ \arrayopts{\colalign{left}} a & b & c \\ 100000 & 100000 & 10000}
+  - <mrow><mtable columnalign="left"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mn>100000</mn></mtd><mtd><mn>100000</mn></mtd><mtd><mn>10000</mn></mtd></mtr></mtable></mrow>
+- - \array{ \arrayopts{\rowalign{top center bottom}} \binom{\alpha}{\omega} & a & b \\ \frac{3}{4} & c & d \\ \int_0^1 & e & f}
+  - <mrow><mtable rowalign='top center bottom'><mtr><mtd><mfrac linethickness="0"><mrow><mi>&alpha;</mi></mrow><mrow><mi>&omega;</mi></mrow></mfrac></mtd><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mfrac><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mtd><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr><mtr><mtd><msubsup><mo>&Integral;</mo><mn>0</mn><mn>1</mn></msubsup></mtd><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable></mrow>
+- - \array{ \arrayopts{\rowalign{top}} \binom{\alpha}{\omega} & a & b \\ \frac{3}{4} & c & d \\ \int_0^1 & e & f}
+  - <mrow><mtable rowalign='top'><mtr><mtd><mfrac linethickness="0"><mrow><mi>&alpha;</mi></mrow><mrow><mi>&omega;</mi></mrow></mfrac></mtd><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mfrac><mrow><mn>3</mn></mrow><mrow><mn>4</mn></mrow></mfrac></mtd><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr><mtr><mtd><msubsup><mo>&Integral;</mo><mn>0</mn><mn>1</mn></msubsup></mtd><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr></mtable></mrow>
+- - |-
+    \array{1 & 0 \\
+                    0 & 1}
+  - <mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow>
+- - \array{1 & 0 \\ 0 & 1}
+  - <mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable></mrow>
+- - \array{1 & 0}
+  - <mrow><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow>
+- - \array{1}
+  - <mrow><mtable><mtr><mtd><mn>1</mn></mtd></mtr></mtable></mrow>
+- - \array{\arrayopts{\collines{solid}} a}
+  - <mrow><mtable columnlines="solid"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></mrow>
+- - \array{\arrayopts{\equalcols{true}} a}
+  - <mrow><mtable equalcolumns="true"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></mrow>
+- - \array{\arrayopts{\equalrows{true}} a}
+  - <mrow><mtable equalrows="true"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></mrow>
+- - \array{\arrayopts{\frame{solid}} a}
+  - <mrow><mtable frame="solid"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></mrow>
+- - \array{\arrayopts{\padding{20}} a & b & c \\ d & e & f \\ \alpha & \beta & \gamma}
+  - <mrow><mtable rowspacing="20" columnspacing="20"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr><mtr><mtd><mi>d</mi></mtd><mtd><mi>e</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mi>&alpha;</mi></mtd><mtd><mi>&beta;</mi></mtd><mtd><mi>&gamma;</mi></mtd></mtr></mtable></mrow>
+- - \array{\arrayopts{\rowlines{solid}} a}
+  - <mrow><mtable rowlines="solid"><mtr><mtd><mi>a</mi></mtd></mtr></mtable></mrow>
+- - \array{\cellopts{\colspan{2}} a \\ b & c}
+  - <mrow><mtable><mtr><mtd columnspan="2"><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable></mrow>
+- - \array{\cellopts{\rowspan{2}} a & b \\ c}
+  - <mrow><mtable><mtr><mtd rowspan="2"><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr></mtable></mrow>
+- - \array{\colspan{2} a \\ b & c}
+  - <mrow><mtable><mtr><mtd columnspan='2'><mi>a</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>c</mi></mtd></mtr></mtable></mrow>
+- - \array{\rowspan{2} a & b \\ c}
+  - <mrow><mtable><mtr><mtd rowspan='2'><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd></mtr></mtable></mrow>
+- - \bar{x}
+  - <mover><mrow><mi>x</mi></mrow><mo>&OverBar;</mo></mover>
+- - \binom{x}{2}
+  - <mfrac linethickness="0"><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></mfrac>
+- - \check{x}
+  - <mover><mrow><mi>x</mi></mrow><mo>&macr;</mo></mover>
+- - \ddot{x}
+  - <mover><mrow><mi>x</mi></mrow><mo>&Dot;</mo></mover>
+- - \dot{x}
+  - <mover><mrow><mi>x</mi></mrow><mo>&dot;</mo></mover>
+- - \forall x\,x<0
+  - <mo>&forall;</mo><mi>x</mi><mspace width="thinmathspace"/><mi>x</mi><mo>&lt;</mo><mn>0</mn>
+- - \frac{1}{2}
+  - <mfrac><mrow><mn>1</mn></mrow><mrow><mn>2</mn></mrow></mfrac>
+- - \frac{1}{N} \sum_r \phi({x^{(r)}})
+  - <mfrac><mrow><mn>1</mn></mrow><mrow><mi>N</mi></mrow></mfrac><msub><mo lspace="thinmathspace" rspace="thinmathspace">&Sum;</mo><mi>r</mi></msub><mi>&phi;</mi><mo stretchy='false'>(</mo><mrow><msup><mi>x</mi><mrow><mo stretchy='false'>(</mo><mi>r</mi><mo stretchy='false'>)</mo></mrow></msup></mrow><mo stretchy='false'>)</mo>
+- - \frac{\sum_r w_r \phi({x^{(r)}})}{\sum_r w_r}
+  - <mfrac><mrow><msub><mo lspace="thinmathspace" rspace="thinmathspace">&Sum;</mo><mi>r</mi></msub><msub><mi>w</mi><mi>r</mi></msub><mi>&phi;</mi><mo stretchy='false'>(</mo><mrow><msup><mi>x</mi><mrow><mo stretchy='false'>(</mo><mi>r</mi><mo stretchy='false'>)</mo></mrow></msup></mrow><mo stretchy='false'>)</mo></mrow><mrow><msub><mo lspace="thinmathspace" rspace="thinmathspace">&Sum;</mo><mi>r</mi></msub><msub><mi>w</mi><mi>r</mi></msub></mrow></mfrac>
+- - \frac{{N-x}}{2}
+  - <mfrac><mrow><mrow><mi>N</mi><mo>&minus;</mo><mi>x</mi></mrow></mrow><mrow><mn>2</mn></mrow></mfrac>
+- - \hat{x}
+  - <mover><mrow><mi>x</mi></mrow><mo>&Hat;</mo></mover>
+- - \int_x f(x)\ dx
+  - <msub><mo>&Integral;</mo><mi>x</mi></msub><mi>f</mi><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mspace width="mediummathspace"/><mi>d</mi><mi>x</mi>
+- - \int_{-\infinity}^\infinity f(x)\ dx = 1
+  - <msubsup><mo>&Integral;</mo><mrow><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mn>&infin;</mn></mrow><mn>&infin;</mn></msubsup><mi>f</mi><mo stretchy='false'>(</mo><mi>x</mi><mo stretchy='false'>)</mo><mspace width="mediummathspace"/><mi>d</mi><mi>x</mi><mo>=</mo><mn>1</mn>
+- - \left ( \binom{2}{3} \right )
+  - <mrow><mo>(</mo><mfrac linethickness="0"><mrow><mn>2</mn></mrow><mrow><mn>3</mn></mrow></mfrac><mo>)</mo></mrow>
+- - \left ( \frac{2}{4+x} \right )^3
+  - <msup><mrow><mo>(</mo><mfrac><mrow><mn>2</mn></mrow><mrow><mn>4</mn><mo>+</mo><mi>x</mi></mrow></mfrac><mo>)</mo></mrow><mn>3</mn></msup>
+- - \left ( x \right
+  - <mrow><mo>(</mo><mi>x</mi></mrow>
+- - \left ( x \right )
+  - <mrow><mo>(</mo><mi>x</mi><mo>)</mo></mrow>
+- - \left ( x \right + 3
+  - <mrow><mo>(</mo><mi>x</mi></mrow><mo>+</mo><mn>3</mn>
+- - \left \frac{x}{y} \right|_{x=0}
+  - <msub><mrow><mfrac><mrow><mi>x</mi></mrow><mrow><mi>y</mi></mrow></mfrac><mo>|</mo></mrow><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></msub>
+- - \left \{ x \right \}
+  - <mrow><mo>{</mo><mi>x</mi><mo>}</mo></mrow>
+- - \lim_3
+  - <msub><mi>lim</mi><mn>3</mn></msub>
+- - \lim_{x\to\infty}f(x)=0
+  - <msub><mi>lim</mi><mrow><mi>x</mi><mo>&rightarrow;</mo><mn>&infin;</mn></mrow></msub><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mn>0</mn>
+- - \ln x
+  - <mi>ln</mi><mi>x</mi>
+- - \mathbb{Hello}
+  - <mi>&Hopf;&eopf;&lopf;&lopf;&oopf;</mi>
+- - \mathcal{Hello}
+  - <mi>&Hscr;&escr;&lscr;&lscr;&oscr;</mi>
+- - |-
+    \mathop{monkey}
+             <
+             b
+  - <mo lspace="0em" rspace="thinmathspace">monkey</mo><mo>&lt;</mo><mi>b</mi>
+- - \overset{\text{n terms}}{\overbrace{1+2+\cdots+n}}
+  - <mover><mrow><mover><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mo>&ctdot;</mo><mo>+</mo><mi>n</mi></mrow><mo>&OverBrace;</mo></mover></mrow><mrow><mtext>n terms</mtext></mrow></mover>
+- - \root{3}{x+y}
+  - <mroot><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mrow><mn>3</mn></mrow></mroot>
+- - \sqrt{i}
+  - <msqrt><mrow><mi>i</mi></mrow></msqrt>
+- - \sum_{n=1}^\infty \frac{(-1)^n}{n} = \ln 2
+  - <msubsup><mo lspace="thinmathspace" rspace="thinmathspace">&Sum;</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mn>&infin;</mn></msubsup><mfrac><mrow><mo stretchy='false'>(</mo><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mn>1</mn><msup><mo stretchy='false'>)</mo><mi>n</mi></msup></mrow><mrow><mi>n</mi></mrow></mfrac><mo>=</mo><mi>ln</mi><mn>2</mn>
+- - \sum_{n=1}^\infty \frac{1}{n} \text{ is divergent, but } \lim_{n \to \infty} \sum_{i=1}^n \frac{1}{i} - \ln n \text{ exists.}
+  - <msubsup><mo lspace="thinmathspace" rspace="thinmathspace">&Sum;</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mn>&infin;</mn></msubsup><mfrac><mrow><mn>1</mn></mrow><mrow><mi>n</mi></mrow></mfrac><mtext> is divergent, but </mtext><msub><mi>lim</mi><mrow><mi>n</mi><mo>&rightarrow;</mo><mn>&infin;</mn></mrow></msub><msubsup><mo lspace="thinmathspace" rspace="thinmathspace">&Sum;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mfrac><mrow><mn>1</mn></mrow><mrow><mi>i</mi></mrow></mfrac><mo>&minus;</mo><mi>ln</mi><mi>n</mi><mtext> exists.</mtext>
+- - \text{ if }
+  - <mtext> if </mtext>
+- - \text{for}\ -\infty
+  - <mtext>for</mtext><mspace width="mediummathspace"/><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mn>&infin;</mn>
+- - \text{if \alpha}
+  - <mtext>if \alpha</mtext>
+- - \text{if}
+  - <mtext>if</mtext>
+- - \underoverset{S}{\alpha}{x=\infty}
+  - <munderover><mrow><mi>x</mi><mo>=</mo><mn>&infin;</mn></mrow><mrow><mi>S</mi></mrow><mrow><mi>&alpha;</mi></mrow></munderover>
+- - \vec{x}
+  - <mover><mrow><mi>x</mi></mrow><mo>&RightVector;</mo></mover>
+- - a < b
+  - <mi>a</mi><mo>&lt;</mo><mi>b</mi>
+- - a = -3
+  - <mi>a</mi><mo>=</mo><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mn>3</mn>
+- - a ^ b
+  - <msup><mi>a</mi><mi>b</mi></msup>
+- - a+3
+  - <mi>a</mi><mo>+</mo><mn>3</mn>
+- - a-b
+  - <mi>a</mi><mo>&minus;</mo><mi>b</mi>
+- - a=-b
+  - <mi>a</mi><mo>=</mo><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mi>b</mi>
+- - a\in S
+  - <mi>a</mi><mo>&Element;</mo><mi>S</mi>
+- - a\mathbb{GOAT}
+  - <mi>a</mi><mi>&Gopf;&Oopf;&Aopf;&Topf;</mi>
+- - a\text{ if a fd ew s }b
+  - <mi>a</mi><mtext> if a fd ew s </mtext><mi>b</mi>
+- - a\text{ if }b
+  - <mi>a</mi><mtext> if </mtext><mi>b</mi>
+- - a\text{ if}b
+  - <mi>a</mi><mtext> if</mtext><mi>b</mi>
+- - a\text{if }b
+  - <mi>a</mi><mtext>if </mtext><mi>b</mi>
+- - a\text{if}b
+  - <mi>a</mi><mtext>if</mtext><mi>b</mi>
+- - a^b
+  - <msup><mi>a</mi><mi>b</mi></msup>
+- - a^b_c
+  - <msubsup><mi>a</mi><mi>c</mi><mi>b</mi></msubsup>
+- - a^{b_c} < a^b_c
+  - <msup><mi>a</mi><mrow><msub><mi>b</mi><mi>c</mi></msub></mrow></msup><mo>&lt;</mo><msubsup><mi>a</mi><mi>c</mi><mi>b</mi></msubsup>
+- - a_b
+  - <msub><mi>a</mi><mi>b</mi></msub>
+- - if
+  - <mi>i</mi><mi>f</mi>
+- - w_r \equiv \frac{P^*({x^{(r)}})}{Q^*({x^{(r)}})}.
+  - <msub><mi>w</mi><mi>r</mi></msub><mo>&equiv;</mo><mfrac><mrow><msup><mi>P</mi><mo>*</mo></msup><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></msup></mrow><mo stretchy="false">)</mo></mrow><mrow><msup><mi>Q</mi><mo>*</mo></msup><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mfrac><mo>.</mo>
+- - x
+  - <mi>x</mi>
+- - x + - x
+  - <mi>x</mi><mo>+</mo><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mi>x</mi>
+- - x - x
+  - <mi>x</mi><mo>&minus;</mo><mi>x</mi>
+- - x--x
+  - <mi>x</mi><mo>&minus;</mo><mo lspace="verythinmathspace" rspace="0em">&minus;</mo><mi>x</mi>
+- - x\textstyle{\int_0^1}\displaystyle{\int_0^1}y
+  - <mi>x</mi><mstyle displaystyle="false"><mrow><msubsup><mo>&Integral;</mo><mn>0</mn><mn>1</mn></msubsup></mrow></mstyle><mstyle displaystyle="true"><mrow><msubsup><mo>&Integral;</mo><mn>0</mn><mn>1</mn></msubsup></mrow></mstyle><mi>y</mi>
+- - "{E_\\theta\\left[\\hat{\\theta}\\right]}"
+  - <mrow><msub><mi>E</mi><mi>&theta;</mi></msub><mrow><mo>[</mo><mover><mrow><mi>&theta;</mi></mrow><mo>&Hat;</mo></mover><mo>]</mo></mrow></mrow>
+- - "{\\frac{\\alpha-\\delta}{\\beta-\\gamma}}"
+  - <mrow><mfrac><mrow><mi>&alpha;</mi><mo>&minus;</mo><mi>&delta;</mi></mrow><mrow><mi>&beta;</mi><mo>&minus;</mo><mi>&gamma;</mi></mrow></mfrac></mrow>
+- - "{\\frac{\\alpha-{\\mathbb{GOAT}}}{\\beta-{{\\mathbb{GOAT}}-x}}}"
+  - <mrow><mfrac><mrow><mi>&alpha;</mi><mo>&minus;</mo><mrow><mi>&Gopf;&Oopf;&Aopf;&Topf;</mi></mrow></mrow><mrow><mi>&beta;</mi><mo>&minus;</mo><mrow><mrow><mi>&Gopf;&Oopf;&Aopf;&Topf;</mi></mrow><mo>&minus;</mo><mi>x</mi></mrow></mrow></mfrac></mrow>
+- - "{\\mathbb{GOAT}}_3"
+  - <msub><mrow><mi>&Gopf;&Oopf;&Aopf;&Topf;</mi></mrow><mn>3</mn></msub>
+- - "{x}"
+  - <mrow><mi>x</mi></mrow>
+- - "{y-x}"
+  - <mrow><mi>y</mi><mo>&minus;</mo><mi>x</mi></mrow>
+- - "{{N-x}-x}"
+  - <mrow><mrow><mi>N</mi><mo>&minus;</mo><mi>x</mi></mrow><mo>&minus;</mo><mi>x</mi></mrow>
+- - "{{{N-x}-x}-x}"
+  - <mrow><mrow><mrow><mi>N</mi><mo>&minus;</mo><mi>x</mi></mrow><mo>&minus;</mo><mi>x</mi></mrow><mo>&minus;</mo><mi>x</mi></mrow>

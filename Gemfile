@@ -56,14 +56,6 @@ group :mysql do
   gem 'mysql',        '2.8.1'
 end
 
-group :postgres do
-  gem 'pg',           '0.10.1'
-end
-
-group :sqlite do
-  gem 'sqlite3-ruby', '1.3.2'
-end
-
 group :test do
   gem 'barista',        '1.2.1'
   gem 'bluecloth',    '2.0.10' # for generating api docs

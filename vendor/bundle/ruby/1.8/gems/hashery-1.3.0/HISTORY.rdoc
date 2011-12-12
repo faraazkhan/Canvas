@@ -1,0 +1,74 @@
+= RELEASE HISTORY
+
+== 1.3.0 // 2010-10-01
+
+This release fixes a minor bug in CastingHash and adds a new
+PropertyHash class.
+
+Changes:
+
+* 1 New Library
+
+  * Added PropertyHash
+
+* 1 Bug Fix
+
+  * Fixed CastingHash#new where #to_proc is called against NilClass
+
+
+== 1.2.0 // 2010-06-04
+
+This release makes two signifficant changes to the Hashery.
+First, we have a new shiny library called FuzzyHash by
+Joshua Hull. It's a cool idea that allows hash keys to be
+regular expressions. Secondly, OpenCascade is now a subclass
+of OpenHash rather than OpenObject (to go along with the
+changes of the last release), and it now support cascading
+within Arrays.
+
+Changes:
+
+* 1 New Library
+
+  * FuzzyHash by Joshua Hull
+
+* 1 Major Enhancement
+
+  * OpenCascade subclasses OpenHash and handles Array cascading.
+
+
+== 1.1.0 // 2010-04-28
+
+A follow-up release of Hashery that adds two new libraries:
+Association and SparseArray. Both of these may seem like odd
+entries, but they each belong in a unique way. An Association
+is akin to a single entry Hash --it represents a pairing.
+While a SpareArray, though compatible with the Array class,
+is completely under-pinned by a Hash in order to make it
+effcient when no ebtries are given for a set of indexes,
+hence "sparse".
+
+Changes:
+
+* 2 New Libraries
+
+  * Added association.rb
+  * Added sparsearray.rb
+
+
+== 1.0.0 // 2010-04-21
+
+This is the first release of the Facets Hashery.
+Most of included classes come directly from Ruby
+Facets, so they have been around a while and are
+in good working condition.
+
+Some improvements are planned for the next release.
+In particular the OrderHash and Dictionary, which
+presently have essentially the same coding, will
+diverge to target slightly different use cases.
+
+Changes:
+
+* Happy Birthday!
+
