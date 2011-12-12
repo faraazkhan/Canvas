@@ -11,6 +11,7 @@ role :db,  "sadachbia.dreamhost.com", :primary => true # This is where Rails mig
 #role :db,  "your slave db-server here"
 set :user, "faraazkhan"
 set :use_sudo, false
+default_run_options[:pty] = true
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
