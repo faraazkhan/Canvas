@@ -2194,81 +2194,50 @@ ActiveRecord::Schema.define(:version => 20111114164345) do
     t.datetime "updated_at"
   end
 
-  create_trigger("enrollments_after_insert_row_when_new_workflow_state_active__tr", :generated => true, :compatibility => 1).
-      on("enrollments").
-      after(:insert).
-      where("NEW.workflow_state = 'active'") do
-    <<-SQL_ACTIONS
-    UPDATE assignments
-    SET needs_grading_count = needs_grading_count + 1
-    WHERE id IN (SELECT assignment_id
-                 FROM submissions
-                 WHERE user_id = NEW.user_id
-                   AND context_code = 'course_' || NEW.course_id
-                   AND ( submissions.submission_type IS NOT NULL AND ( submissions.score IS NULL OR NOT submissions.grade_matches_current_submission OR submissions.workflow_state IN ('submitted', 'pending_review') ) )
-                );
-    SQL_ACTIONS
-  end
+  # WARNING: generating adapter-specific definition for enrollments_after_insert_row_when_new_workflow_state_active__tr due to a mismatch.
+  # either there's a bug in hairtrigger or you've messed up your migrations and/or db :-/
+  execute(<<-TRIGGERSQL)
+CREATE DEFINER = root@localhost TRIGGER enrollments_after_insert_row_when_new_workflow_state_active__tr AFTER INSERT ON enrollments
+FOR EACH ROW
+BEGIN
+    IF NEW.workflow_state = 'active' THEN
+        UPDATE assignments
+        SET needs_grading_count = needs_grading_count + 1
+        WHERE id IN (SELECT assignment_id
+                     FROM submissions
+                     WHERE user_id = NEW.user_id
+                       AND context_code = 'course_' || NEW.course_id
+                       AND ( submissions.submission_type IS NOT NULL AND ( submissions.score IS NULL OR NOT submissions.grade_matches_current_submission OR submissions.workflow_state IN ('submitted', 'pending_review') ) )
+                    );
+    END IF;
+END
+  TRIGGERSQL
 
-  create_trigger("enrollments_after_update_row_when_new_workflow_state_old_wor_tr", :generated => true, :compatibility => 1).
-      on("enrollments").
-      after(:update).
-      where("NEW.workflow_state <> OLD.workflow_state AND (NEW.workflow_state = 'active' OR OLD.workflow_state = 'active')") do
-    <<-SQL_ACTIONS
-    UPDATE assignments
-    SET needs_grading_count = needs_grading_count + CASE WHEN NEW.workflow_state = 'active' THEN 1 ELSE -1 END
-    WHERE id IN (SELECT assignment_id
-                 FROM submissions
-                 WHERE user_id = NEW.user_id
-                   AND context_code = 'course_' || NEW.course_id
-                   AND ( submissions.submission_type IS NOT NULL AND ( submissions.score IS NULL OR NOT submissions.grade_matches_current_submission OR submissions.workflow_state IN ('submitted', 'pending_review') ) )
-                );
-    SQL_ACTIONS
-  end
+  # WARNING: generating adapter-specific definition for enrollments_after_update_row_when_new_workflow_state_old_wor_tr due to a mismatch.
+  # either there's a bug in hairtrigger or you've messed up your migrations and/or db :-/
+  execute(<<-TRIGGERSQL)
+CREATE DEFINER = root@localhost TRIGGER enrollments_after_update_row_when_new_workflow_state_old_wor_tr AFTER UPDATE ON enrollments
+FOR EACH ROW
+BEGIN
+    IF NEW.workflow_state <> OLD.workflow_state AND (NEW.workflow_state = 'active' OR OLD.workflow_state = 'active') THEN
+        UPDATE assignments
+        SET needs_grading_count = needs_grading_count + CASE WHEN NEW.workflow_state = 'active' THEN 1 ELSE -1 END
+        WHERE id IN (SELECT assignment_id
+                     FROM submissions
+                     WHERE user_id = NEW.user_id
+                       AND context_code = 'course_' || NEW.course_id
+                       AND ( submissions.submission_type IS NOT NULL AND ( submissions.score IS NULL OR NOT submissions.grade_matches_current_submission OR submissions.workflow_state IN ('submitted', 'pending_review') ) )
+                    );
+    END IF;
+END
+  TRIGGERSQL
 
-  create_trigger("submissions_after_update_row_tr", :generated => true, :compatibility => 1).
-      on("submissions").
-      after(:update) do |t|
-    t.where("( OLD.submission_type IS NOT NULL AND ( OLD.score IS NULL OR NOT OLD.grade_matches_current_submission OR OLD.workflow_state IN ('submitted', 'pending_review') ) ) <> ( NEW.submission_type IS NOT NULL AND ( NEW.score IS NULL OR NOT NEW.grade_matches_current_submission OR NEW.workflow_state IN ('submitted', 'pending_review') ) )") do
-      <<-SQL_ACTIONS
-      UPDATE assignments
-      SET needs_grading_count = needs_grading_count + CASE WHEN ( NEW.submission_type IS NOT NULL AND ( NEW.score IS NULL OR NOT NEW.grade_matches_current_submission OR NEW.workflow_state IN ('submitted', 'pending_review') ) ) THEN 1 ELSE -1 END
-      WHERE id = NEW.assignment_id;
-      SQL_ACTIONS
-    end
-  end
-
-  create_trigger("submissions_after_insert_row_tr", :generated => true, :compatibility => 1).
-      on("submissions").
-      after(:insert) do |t|
-    t.where(" NEW.submission_type IS NOT NULL AND ( NEW.score IS NULL OR NOT NEW.grade_matches_current_submission OR NEW.workflow_state IN ('submitted', 'pending_review') ) ") do
-      <<-SQL_ACTIONS
-      UPDATE assignments
-      SET needs_grading_count = needs_grading_count + 1
-      WHERE id = NEW.assignment_id;
-      SQL_ACTIONS
-    end
-  end
-
-  create_trigger("submission_comments_after_insert_row_tr", :generated => true, :compatibility => 1).
-      on("submission_comments").
-      after(:insert) do
-    <<-SQL_ACTIONS
-    UPDATE submissions
-    SET has_admin_comment=EXISTS(
-      SELECT 1 FROM submission_comments AS sc, assignments AS a, courses AS c, enrollments AS e
-      WHERE sc.submission_id = submissions.id AND a.id = submissions.assignment_id
-        AND c.id = a.context_id AND a.context_type = 'Course' AND e.course_id = c.id
-        AND e.user_id = sc.author_id AND e.workflow_state = 'active'
-        AND e.type IN ('TeacherEnrollment', 'TaEnrollment'))
-    WHERE id = NEW.submission_id;
-    SQL_ACTIONS
-  end
-
-  create_trigger("submission_comments_after_delete_row_tr", :generated => true, :compatibility => 1).
-      on("submission_comments").
-      after(:delete) do
-    <<-SQL_ACTIONS
+  # WARNING: generating adapter-specific definition for submission_comments_after_delete_row_tr due to a mismatch.
+  # either there's a bug in hairtrigger or you've messed up your migrations and/or db :-/
+  execute(<<-TRIGGERSQL)
+CREATE DEFINER = root@localhost TRIGGER submission_comments_after_delete_row_tr AFTER DELETE ON submission_comments
+FOR EACH ROW
+BEGIN
     UPDATE submissions
     SET has_admin_comment=EXISTS(
       SELECT 1 FROM submission_comments AS sc, assignments AS a, courses AS c, enrollments AS e
@@ -2277,7 +2246,52 @@ ActiveRecord::Schema.define(:version => 20111114164345) do
         AND e.user_id = sc.author_id AND e.workflow_state = 'active'
         AND e.type IN ('TeacherEnrollment', 'TaEnrollment'))
     WHERE id = OLD.submission_id;
-    SQL_ACTIONS
-  end
+END
+  TRIGGERSQL
+
+  # WARNING: generating adapter-specific definition for submission_comments_after_insert_row_tr due to a mismatch.
+  # either there's a bug in hairtrigger or you've messed up your migrations and/or db :-/
+  execute(<<-TRIGGERSQL)
+CREATE DEFINER = root@localhost TRIGGER submission_comments_after_insert_row_tr AFTER INSERT ON submission_comments
+FOR EACH ROW
+BEGIN
+    UPDATE submissions
+    SET has_admin_comment=EXISTS(
+      SELECT 1 FROM submission_comments AS sc, assignments AS a, courses AS c, enrollments AS e
+      WHERE sc.submission_id = submissions.id AND a.id = submissions.assignment_id
+        AND c.id = a.context_id AND a.context_type = 'Course' AND e.course_id = c.id
+        AND e.user_id = sc.author_id AND e.workflow_state = 'active'
+        AND e.type IN ('TeacherEnrollment', 'TaEnrollment'))
+    WHERE id = NEW.submission_id;
+END
+  TRIGGERSQL
+
+  # WARNING: generating adapter-specific definition for submissions_after_insert_row_tr due to a mismatch.
+  # either there's a bug in hairtrigger or you've messed up your migrations and/or db :-/
+  execute(<<-TRIGGERSQL)
+CREATE DEFINER = root@localhost TRIGGER submissions_after_insert_row_tr AFTER INSERT ON submissions
+FOR EACH ROW
+BEGIN
+    IF  NEW.submission_type IS NOT NULL AND ( NEW.score IS NULL OR NOT NEW.grade_matches_current_submission OR NEW.workflow_state IN ('submitted', 'pending_review') )  THEN
+        UPDATE assignments
+        SET needs_grading_count = needs_grading_count + 1
+        WHERE id = NEW.assignment_id;
+    END IF;
+END
+  TRIGGERSQL
+
+  # WARNING: generating adapter-specific definition for submissions_after_update_row_tr due to a mismatch.
+  # either there's a bug in hairtrigger or you've messed up your migrations and/or db :-/
+  execute(<<-TRIGGERSQL)
+CREATE DEFINER = root@localhost TRIGGER submissions_after_update_row_tr AFTER UPDATE ON submissions
+FOR EACH ROW
+BEGIN
+    IF ( OLD.submission_type IS NOT NULL AND ( OLD.score IS NULL OR NOT OLD.grade_matches_current_submission OR OLD.workflow_state IN ('submitted', 'pending_review') ) ) <> ( NEW.submission_type IS NOT NULL AND ( NEW.score IS NULL OR NOT NEW.grade_matches_current_submission OR NEW.workflow_state IN ('submitted', 'pending_review') ) ) THEN
+        UPDATE assignments
+        SET needs_grading_count = needs_grading_count + CASE WHEN ( NEW.submission_type IS NOT NULL AND ( NEW.score IS NULL OR NOT NEW.grade_matches_current_submission OR NEW.workflow_state IN ('submitted', 'pending_review') ) ) THEN 1 ELSE -1 END
+        WHERE id = NEW.assignment_id;
+    END IF;
+END
+  TRIGGERSQL
 
 end
