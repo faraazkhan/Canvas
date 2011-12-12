@@ -1,0 +1,87 @@
+Author::    William Morgan (mailto: wmorgan-ritex@masanjin.net)
+Copyright:: Copyright 2005--2010 William Morgan
+License::   GNU GPL version 2
+
+= Introduction
+
+Ritex converts expressions from WebTeX into MathML. WebTeX is an adaptation of
+TeX math syntax for web display. Ritex supports most TeX math syntax, and
+supports macros.
+
+For example, Ritex turns
+  \alpha^\beta
+into
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <msup>
+      <mi>&alpha;</mi>
+      <mi>&beta;</mi>
+    </msup>
+  </math>
+
+= How to get Ritex
+
+To install, use RubyGems: gem install ritex.
+For examples and git instructions, see the home page: http://masanjin.net/ritex/
+
+= News about Ritex
+
+See the blog: http://all-thing.net/label/ritex/.
+
+= Synopsis
+
+  require 'rubygems'
+  require 'ritex'
+  p = Ritex::Parser.new
+  ARGF.each { |l| puts p.parse(l) }
+
+  ## or ...
+
+  ARGF.each do |l|
+    begin
+      puts p.parse(l)
+    rescue Racc::ParseError
+      $stderr.puts "invalid input"
+    end
+  end
+
+See the documentation for Ritex::Parser for gory details.
+
+= Ritex's MathML output
+
+To be pedantic, Ritex is a WebTeX to MathML converter. WebTeX is an adapation
+of the TeX math syntax which is designed for web page display. WebTeX
+documentation can be found at:
+  http://stuff.mit.edu/afs/athena/software/webeq/currenthome/docs/webtex/toc.html
+
+If you're familiar with TeX math syntax, it's mostly the same, but there are
+several important differences in WebTeX. Notably:
+
+* arrays: Use \array syntax; there's no no \eqnarray or \align
+* macro definitions: \define; no \newcommand or \def
+* \left and \right no longer need "invisible" delimiters like "."
+
+These differences are explained in the WebTeX documentation. 
+
+Ritex also supports many of itex2MML's various extensions to WebTeX, mainly
+consisting of additional aliases (e.g. \infinity for \infty) and markup (e.g.
+\underoverset).
+
+= Comparison with itex2MML
+
+itex2MML is another option for converting LaTeX-like math into MathML. It has
+Ruby bindings. Compared against itex2MML version 1.3.7 (3/7/2009), Ritex has
+several differences:
+
+* It supports macros.
+* It's written in Ruby.
+* It fixes several output bugs:
+  - Operators like < and > produce <mo> (math operator) tags instead of
+    <mi> (math identifier) tags.
+  - A sequence of letters like "abc" is treated as three separate variables and
+    not as one variable. That's The TeX Way (tm).
+  - \ (backslash space) is a medium space, not an undefined character.
+  - \binom output does not add extra parentheses
+  - Empty delimiters are accepted (e.g. "\left" is sufficient; no need for
+    "\left.") as per WebTeX spec.
+  - \cellopts{} can be elided in arrays as per WebTeX examples.
+* It's slower.

@@ -1,0 +1,32 @@
+version 1.0, 04/13/2010
+=======================
+- API change: Parser#parse now takes an options hash instead of
+  the two boolean arguments.
+- Add a :raw format which outputs LaTeX math. You can use this to
+  take advantage of Ritex's macro resolution.
+- Remove the requirement that only one Parser exist. This has the
+  advantage of also making Ritex thread-save.
+
+version 0.3, 06/17/2009
+=======================
+Various Ruby 1.9 updates. No API changes.
+
+version 0.2, 04/02/2009
+=======================
+
+After almost four years, a new version! Many upgrades and updates.
+Highlights include:
+* array options support
+* better unary minus detection
+* better testing
+
+version 0.1, 9/15/2005
+======================
+
+First version. Highly experimental!
+
+Unimplemented WebTeX features:
+* \floatleft, \floatright
+* \tensor and \multiscripts
+* macros with 4 or more arguments
+* \bghighlight, \fghighlight, \statusline

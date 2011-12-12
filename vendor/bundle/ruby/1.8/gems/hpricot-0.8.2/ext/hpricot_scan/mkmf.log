@@ -1,0 +1,13 @@
+have_library: checking for main() in -lc... -------------------- yes
+
+"/usr/bin/gcc-4.2 -o conftest -I/opt/local/include -I. -I/Users/FaraazKhan/.rvm/rubies/ree-1.8.7-2011.03/lib/ruby/1.8/i686-darwin11.0.0 -I.  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE   -g -O2  -pipe -fno-common   conftest.c  -L. -L/Users/FaraazKhan/.rvm/rubies/ree-1.8.7-2011.03/lib -L.      -lruby-static -lc  -L/opt/local/lib -ldl -lobjc  "
+ld: warning: directory not found for option '-L/opt/local/lib'
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
