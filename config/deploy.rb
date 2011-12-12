@@ -15,6 +15,7 @@ role :db,  "sadachbia.dreamhost.com", :primary => true # This is where Rails mig
 #role :db,  "your slave db-server here"
 set :user, "faraazkhan"
 set :use_sudo, false
+set :default_environment, {'PATH' => "'/usr/lib/ruby/gems/1.8/bin//bundle:/home/faraazkhan/.gems/bin:/usr/lib/ruby/gems/1.8/bin/:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games'"}
 default_run_options[:pty] = true
 
 # if you're still using the script/reaper helper you will need
