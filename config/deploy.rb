@@ -1,4 +1,3 @@
-require "bundler/capistrano"
 set :application, "lms"
 set :repository,  "git@github.com:faraazkhan/canvas.git"
 
@@ -7,6 +6,8 @@ set :scm_passphrase, "faraazkhan"
 set :branch, "master"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :deploy_to, "~/lms.rationalizeitconsulting.com/current/var/www/lms.rationalizeitconsulting.com"
+
+require "bundler/capistrano"
 
 role :web, "sadachbia.dreamhost.com"
 role :app, "sadachbia.dreamhost.com"
@@ -28,7 +29,3 @@ default_run_options[:pty] = true
      run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
    end
  end
-
-# task :bundle do
- #   run "/usr/lib/ruby/gems/1.8/bin//bundle install --gemfile #{current_path}/Gemfile --path /var/www/applications/#{rails_env}.blackmanjones.com/shared/vendor_bundle --deployment --quiet --without development test cucumber"
-  #end
