@@ -7,6 +7,8 @@ set :branch, "master"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :deploy_to, "~/lms.rationalizeitconsulting.com/current/var/www/lms.rationalizeitconsulting.com"
 
+require "bundler/capistrano"
+
 role :web, "sadachbia.dreamhost.com"
 role :app, "sadachbia.dreamhost.com"
 role :db,  "sadachbia.dreamhost.com", :primary => true # This is where Rails migrations will run
