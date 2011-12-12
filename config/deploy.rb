@@ -5,7 +5,7 @@ set :scm, "git"
 set :scm_passphrase, "faraazkhan"
 set :branch, "master"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-set :deploy_to, "home/faraazkhan/lms.rationalizeitconsulting.com/var/www/lms.rationalizeitconsulting.com"
+set :deploy_to, "home/faraazkhan/lms.rationalizeitconsulting.com/current/var/www/lms.rationalizeitconsulting.com"
 
 role :web, "sadachbia.dreamhost.com"
 role :app, "sadachbia.dreamhost.com"
