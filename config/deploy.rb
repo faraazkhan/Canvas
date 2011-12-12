@@ -2,6 +2,7 @@ set :application, "lms"
 set :repository,  "git@github.com:faraazkhan/canvas.git"
 
 set :scm, "git" 
+set :scm_passphrase, "faraazkhan"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :deploy_to, "home/faraazkhan/lms.rationalizeitconsulting.com/var/www/lms.rationalizeitconsulting.com"
 
