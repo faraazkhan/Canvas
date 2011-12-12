@@ -47,6 +47,7 @@ gem 'sanitize',       '1.2.1'
 gem 'uuid',           '2.3.2'
 gem 'will_paginate',  '2.3.15'
 gem 'xml-simple',     '1.0.12', :require => 'xmlsimple'
+gem 'passenger'
 # this is only needed by jammit, but we're pinning at 0.9.4 because 0.9.5 breaks
 gem 'yui-compressor', '0.9.4'
 gem 'taps'
@@ -54,14 +55,6 @@ gem 'capistrano'
 
 group :mysql do
   gem 'mysql',        '2.8.1'
-end
-
-group :postgres do
-  gem 'pg',           '0.10.1'
-end
-
-group :sqlite do
-  gem 'sqlite3-ruby', '1.3.2'
 end
 
 group :test do
@@ -86,7 +79,6 @@ group :development do
   gem 'ya2yaml', '0.30'
   gem 'guard'
   gem 'guard-coffeescript'
-  gem 'passenger'
   gem 'rb-fsevent'
 end
 
