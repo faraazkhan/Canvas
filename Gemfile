@@ -52,9 +52,17 @@ gem 'passenger'
 gem 'yui-compressor', '0.9.4'
 gem 'taps'
 gem 'capistrano'
+gem 'rufus-scheduler', '2.0.6'
+gem 'recaptcha', '0.3.1', :require => 'recaptcha/rails'
+
 
 group :mysql do
   gem 'mysql',        '2.8.1'
+end
+
+group 'respondus_soap_endpoint' do
+  gem 'soap4r', '1.5.8'
+  gem 'soap4r-middleware', '0.8.2'
 end
 
 group :test do
@@ -107,6 +115,3 @@ end
 
 # Non-standard Canvas extension to Bundler behavior -- load the Gemfiles from
 # plugins.
-Dir[File.join(File.dirname(__FILE__),'vendor/plugins/*/Gemfile')].each do |g|
-  eval(File.read(g))
-end
