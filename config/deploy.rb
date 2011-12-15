@@ -14,7 +14,7 @@ role :app, location
 role :db,  location 
 #role :db,  "your slave db-server here"
 set :user, "bitnami"
-set :use_sudo, false
+set :use_sudo, true 
 default_run_options[:pty] = true
 
 # if you're still using the script/reaper helper you will need
