@@ -10,7 +10,7 @@ set :scm_passphrase, "faraazkhan"
 set :branch, "master"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 set :deploy_to, "/var/www/applications/rationalizeitconsulting.com"
-set :location, "ec2-50-17-155-47.compute-1.amazonaws.com"
+set :location, "107.21.100.207"
 
 role :web, location
 role :app, location
