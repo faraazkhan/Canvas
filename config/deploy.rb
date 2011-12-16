@@ -9,7 +9,7 @@ set :scm, "git"
 set :scm_passphrase, "faraazkhan"
 set :branch, "master"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
-set :deploy_to, "/var/www/applications/rationalizeit/lms.rationalizeitconsulting.com"
+set :deploy_to, "/var/www/applications/rationalizeitconsulting.com"
 set :location, "ec2-50-17-155-47.compute-1.amazonaws.com"
 
 role :web, location
