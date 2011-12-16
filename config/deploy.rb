@@ -1,5 +1,6 @@
 require "bundler/capistrano"
 require "rvm/capistrano" 
+before "deploy", "deploy:create_gemset"
 set :rvm_ruby_string, 'ree@canvas'
 set :application, "lms"
 set :repository,  "git@github.com:faraazkhan/canvas.git"
@@ -31,6 +32,12 @@ default_run_options[:pty] = true
      run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
    end
  end
+
+ namespace :deploy do
+  desc "Create the gemset"
+  task :create_gemset do
+    run "rvm #{rvm_ruby_string} --create"
+  end
 
 namespace :rvm do
   desc 'Trust rvmrc file'
