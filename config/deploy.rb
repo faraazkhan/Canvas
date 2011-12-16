@@ -17,7 +17,7 @@ role :db,  location, :primary => true
 #role :db,  "your slave db-server here"
 set :user, "root"
 set :use_sudo, false
-set :ssh_options, {:forward_agent => true}
+set :ssh_options, {:forward_agent => true, :keys => [File.join(ENV["HOME"], ".ssh", "rationalizeit.pem")]}
 default_run_options[:pty] = true
 
 # if you're still using the script/reaper helper you will need
