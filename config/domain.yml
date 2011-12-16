@@ -3,7 +3,7 @@ development:
 
 production:
   domain: "rationalizeitconsulting.com"
-  # files_domain: "canvasfiles.example.com"
+  files_domain: "material.rationalizeitconsulting.com"
 
 # don't set a domain for the test environment, this is handled automatically by
 # the specs

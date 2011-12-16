@@ -1,12 +1,13 @@
-development:
-  address: "smtp.example.com"
-  port: "25"
-  user_name: "user"
-  password: "password"
+production:
+  address: "smtp.gmail.com"
+  port: "587"
+  user_name: "traning@rationalizeit.us"
+  password: "iffath123"
   authentication: "plain" # plain, login, or cram_md5
-  domain: "example.com"
-  outgoing_address: "canvas@example.com"
-  default_name: "Instructure Canvas"
+  enable_starttls_auto: true
+  domain: "rationalizeit.us"
+  outgoing_address: "training@rationalizeit.us"
+  default_name: "Better Business Analysis"
 
 # or to use sendmail --
 #
@@ -16,7 +17,7 @@ development:
 test:
   delivery_method: "test"
 
-production:
+development:
   address: "smtp.example.com"
   port: "25"
   user_name: "user"
