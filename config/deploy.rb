@@ -13,7 +13,7 @@ role :web, location, :primary => true
 role :app, location, :primary => true 
 role :db,  location, :primary => true
 #role :db,  "your slave db-server here"
-set :user, "deployer"
+set :user, "bitnami"
 set :ssh_options, {:forward_agent => true}
 default_run_options[:pty] = true
 
