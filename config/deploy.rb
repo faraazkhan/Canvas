@@ -16,6 +16,7 @@ role :app, location
 role :db,  location, :primary => true
 #role :db,  "your slave db-server here"
 set :user, "root"
+set :use_sudo, false
 set :ssh_options, {:forward_agent => true}
 default_run_options[:pty] = true
 
