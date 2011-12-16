@@ -9,9 +9,9 @@ set :branch, "master"
 set :deploy_to, "~/bitnami/rationalizeit/lms.rationalizeitconsulting.com/current/var/www/lms.rationalizeitconsulting.com"
 set :location, "ec2-107-22-40-195.compute-1.amazonaws.com"
 
-role :web, location
-role :app, location
-role :db,  location
+role :web, location, :primary => true 
+role :app, location, :primary => true 
+role :db,  location, :primary => true
 #role :db,  "your slave db-server here"
 set :user, "deployer"
 set :ssh_options, {:forward_agent => true}
