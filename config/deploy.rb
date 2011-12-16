@@ -14,7 +14,6 @@ role :app, location, :primary => true
 role :db,  location, :primary => true
 #role :db,  "your slave db-server here"
 set :user, "deployer"
-set :use_sudo, true 
 default_run_options[:pty] = true
 
 # if you're still using the script/reaper helper you will need
