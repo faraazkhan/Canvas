@@ -38,6 +38,7 @@ default_run_options[:pty] = true
   task :create_gemset do
     run "rvm #{rvm_ruby_string} --create"
   end
+ end
 
 namespace :rvm do
   desc 'Trust rvmrc file'
