@@ -1,6 +1,6 @@
 require "bundler/capistrano"
 require "rvm/capistrano" 
-set :rvm_ruby_string 'ree@canvas'
+set :rvm_ruby_string, 'ree@canvas'
 set :application, "lms"
 set :repository,  "git@github.com:faraazkhan/canvas.git"
 
