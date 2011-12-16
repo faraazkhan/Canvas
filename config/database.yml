@@ -3,8 +3,8 @@ mysql_common: &mysql
   adapter: mysql
   encoding: utf8
   host: localhost
-  username: faraazkhan 
-  password: iffath123 
+  username: root 
+  password: password
 
 development:
   <<: *mysql
