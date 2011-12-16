@@ -161,6 +161,7 @@ GEM
       activesupport
     rubyzip (0.9.4)
     rufus-scheduler (2.0.6)
+    rvm (1.9.2)
     sanitize (1.2.1)
       nokogiri (~> 1.4.1)
     sass (3.1.11)
@@ -262,6 +263,7 @@ DEPENDENCIES
   rubycas-client (= 2.2.1)
   rubyzip (= 0.9.4)
   rufus-scheduler (= 2.0.6)
+  rvm
   sanitize (= 1.2.1)
   selenium-webdriver (= 2.12.0)
   sexp_processor (= 3.0.5)
