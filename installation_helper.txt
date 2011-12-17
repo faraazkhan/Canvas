@@ -7,13 +7,54 @@ Node JS -- Install from source code
 yum install mysql-devel httpd mod_ssl
 
 
-Install RVM
+-- Install RVM
+bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bash_profile
+source .bash_profile
+-- test
+type rvm | head -1
+--then run 
+rvm notes
+rvm requirements
+rvm install ree
+rvm use ree --default
+rvm gemset create canvas
+rvm use ree@canvas
+echo "rvm use ree@canvas" > .rvmrc
+-- RVM RubyGems
+gem install bundler
+
+--Install Redis
+wget http://redis.googlecode.com/files/redis-2.2.15.tar.gz
+tar xzvf redis-2.2.15.tar.gz
+cd redis-2.2.15
+make
+
+--Start Redis
+cd redis-2.2.15
+src/redis-server
+-- Console
+src/redis-cli
+
+--System Rubygems
 gem update
+gem install bundler
 gem install passenger
 passenger-install-apache2-module
 gem update rake
 gem install execjs
-Install red is from source: http://redis.googlecode.com/files/redis-2.2.15.tar.gz
+gem install coffee-script
+gem install therubyracer
+
+-- Start MySQL Server
+mysqld_safe
+--Troubleshoot mysql.sock error
+cd /var/lib/mysql
+touch mysql.sock
+chown mysql.mysql mysql.sock
+chmod 777 mysql.sock
+cd /tmp
+ln -s  /var/lib/mysql/mysql.sock mysql.sock
 
 create databases
 Centos Virtual Host Location: /etc/httpd/conf.d/
