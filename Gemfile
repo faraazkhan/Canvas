@@ -50,6 +50,7 @@ gem 'xml-simple',     '1.0.12', :require => 'xmlsimple'
 gem 'passenger'
 gem 'rvm'
 gem 'execjs'
+gem 'coffee-script'
 # this is only needed by jammit, but we're pinning at 0.9.4 because 0.9.5 breaks
 gem 'yui-compressor', '0.9.4'
 gem 'taps'

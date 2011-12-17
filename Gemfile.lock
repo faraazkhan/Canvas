@@ -213,6 +213,7 @@ DEPENDENCIES
   builder (= 2.1.2)
   capistrano
   closure-compiler (= 1.0.0)
+  coffee-script
   coffee-script-source (= 1.1.2)
   compass (= 0.11.5)
   daemons (= 1.1.0)
