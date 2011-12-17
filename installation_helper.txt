@@ -16,6 +16,9 @@ make
 make install
 echo "export PATH=$PATH:/opt/node/bin" > ~/.bash_profile
 
+-- Install NPM & Coffee Script
+curl http://npmjs.org/install.sh | sh
+
 
 -- Install RVM
 bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer )
