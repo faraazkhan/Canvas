@@ -1,0 +1,15 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias cn='cd /var/www/applications/rationalizeitconsulting.com/current'
+alias servconf='vi /etc/httpd/conf/httpd.conf'
+alias apache='/sbin/service httpd'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
