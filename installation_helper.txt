@@ -1,6 +1,8 @@
 yum update
 yum groupinstall "Development Tools"
 yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel libxml2  libxml2-devel libxslt libxslt-devel ruby-devel ruby-rdoc install curl-devel httpd-devel apr-devel apr-util-devel
+yum install make bzip2 autoconf automake libtool bison iconv-devel
+yum install -y java java-devel
 yum groupinstall "MYSQL Database Server" "MYSQL Database Client"
 yum install zlib-devel ImageMagick
 yum install mysql-devel httpd mod_ssl libssl-devel
