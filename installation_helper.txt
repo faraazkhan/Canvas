@@ -18,6 +18,8 @@ echo "export PATH=$PATH:/opt/node/bin" > ~/.bash_profile
 
 -- Install NPM & Coffee Script
 curl http://npmjs.org/install.sh | sh
+npm install -g coffee-script
+
 
 
 -- Install RVM

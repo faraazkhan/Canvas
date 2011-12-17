@@ -25,6 +25,11 @@ make
 make install
 echo "export PATH=$PATH:/opt/node/bin" > ~/.bash_profile
 
+# Install NPM && Coffee Script
+cd ~
+curl http://npmjs.org/install.sh | sh
+npm install -g coffee-script
+
 # install redis
 cd ~/sources
 wget http://redis.googlecode.com/files/redis-2.2.15.tar.gz
