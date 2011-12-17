@@ -1,10 +1,17 @@
 yum update
-yum group install "Development Tools"
+yum groupinstall "Development Tools"
 yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel libxml2  libxml2-devel libxslt libxslt-devel ruby-devel ruby-rdoc install curl-devel httpd-devel apr-devel apr-util-devel
-yum group install "MYSQL Database Server" "MYSQL Database Client"
+yum groupinstall "MYSQL Database Server" "MYSQL Database Client"
 yum install zlib-devel ImageMagick
-Node JS -- Install from source code 
-yum install mysql-devel httpd mod_ssl
+yum install mysql-devel httpd mod_ssl libssl-devel
+
+--Install Node JS
+wget http://nodejs.org/dist/v0.6.6/node-v0.6.6.tar.gz
+tar -zxf node-v0.6.6.tar.gz
+cd node-v0.6.6
+./configure
+make 
+make install
 
 
 -- Install RVM
@@ -23,6 +30,7 @@ rvm use ree@canvas
 echo "rvm use ree@canvas" > .rvmrc
 -- RVM RubyGems
 gem install bundler
+
 
 --Install Redis
 wget http://redis.googlecode.com/files/redis-2.2.15.tar.gz
