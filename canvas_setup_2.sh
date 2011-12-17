@@ -27,6 +27,7 @@ SQL="${Q1}${Q2}${Q3}"
 
 $MYSQL -uroot -p -e "$SQL"
 
+
 # Initial Database Set up (Manual steps)
 $GEM_HOME/bin/bundle exec rake db:initial_setup
 $GEM_HOME/bin/bundle exec rake canvas:compile_assets
