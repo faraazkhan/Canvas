@@ -1,0 +1,43 @@
+yum update
+yum group install "Development Tools"
+yum install -y gcc-c++ patch readline readline-devel zlib zlib-devel libyaml-devel libffi-devel openssl-devel libxml2  libxml2-devel libxslt libxslt-devel ruby-devel ruby-rdoc install curl-devel httpd-devel apr-devel apr-util-devel
+yum group install "MYSQL Database Server" "MYSQL Database Client"
+yum install zlib-devel ImageMagick
+Node JS -- Install from source code 
+yum install mysql-devel httpd mod_ssl
+
+
+Install RVM
+gem update
+gem install passenger
+passenger-install-apache2-module
+gem update rake
+gem install execjs
+Install red is from source: http://redis.googlecode.com/files/redis-2.2.15.tar.gz
+
+create databases
+Centos Virtual Host Location: /etc/httpd/conf.d/
+
+Apache Config:
+
+LoadModule passenger_module /usr/local/rvm/gems/ree-1.8.7-2011.03@canvas/gems/passenger-3.0.11/ext/apache2/mod_passenger.so
+   PassengerRoot /usr/local/rvm/gems/ree-1.8.7-2011.03@canvas/gems/passenger-3.0.11
+   PassengerRuby /usr/local/rvm/wrappers/ree-1.8.7-2011.03@canvas/ruby
+
+Default Apache layout for Centos
+
+ServerRoot              ::      /etc/httpd
+Primary Config Fle      ::      /etc/httpd/conf/httpd.conf
+Other Config Files      ::      /etc/httpd/conf.d
+Module Locations        ::      /usr/lib/httpd/modules
+DocumentRoot            ::      /var/www/html
+ErrorLog                ::      /var/log/httpd/error_log
+AccessLog               ::      /var/log/httpd/access_log
+cgi-bin                 ::      /var/www/cgi-bin (empty and disabled by default)
+binary                  ::      /usr/sbin/httpd
+runtime directory       ::      /etc/httpd/run
+start/stop              ::      /sbin/service httpd {start|stop|restart|condrestart|reload|status|fullstatus|graceful|help|configtest}
+
+Did not create directory for attachment_fu under tmp/
+Did not load css/all assets
+Did not compile assets in public folder
