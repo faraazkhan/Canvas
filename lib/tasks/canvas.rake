@@ -135,7 +135,7 @@ namespace :canvas do
     raise "Error running jammit: \n#{output}\nABORTING" if $?.exitstatus != 0
 
     puts "--> Generating documentation [yardoc]"
-    Rake::Task['doc:api'].invoke
+    #Rake::Task['doc:api'].invoke
   end
 end
 
