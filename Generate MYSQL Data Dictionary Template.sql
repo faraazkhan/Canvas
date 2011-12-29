@@ -4,13 +4,15 @@ table_name As 'Table Name',
 column_name As 'Actual Field Name in the DB', 
 TITLEIZE(REPLACE(column_name, '_', ' ')) As 'Field Name as shown in the Reporting Tool', 
 CASE
-	WHEN column_name = 'id' THEN ' Unique Identifier for each record in the table'
-	WHEN column_name = 'created_at' THEN ' Date & Time of Record Creation'
-	WHEN column_name = 'updated_at' THEN ' Date & Time the record was last updated'
+	WHEN column_name = 'id' THEN 'Unique Identifier for each record in the table'
+	WHEN column_name = 'created_at' THEN 'Date & Time the record was created'
+	WHEN column_name = 'updated_at' THEN 'Date & Time the record was last updated'
 	WHEN column_name = 'created_by_id' THEN 'ID of the User that created the record'
 	WHEN column_name = 'updated_by_id' THEN 'ID of the User that last updated the record'
 	WHEN column_name LIKE '%_id' and column_name != 'id' THEN concat('ID of the ', TITLEIZE(left(column_name, char_length(column_name)-2)), 'associated with the given ', TITLEIZE(left(table_name, char_length(table_name) - 1)))
-	WHEN table_name like '%type%' OR table_name like '%group%' OR table_name like '%group%' or table_name = 'delivery_methods' or table_name = 'school_sub_regions' or table_name = 'hearing_officers' and column_name NOT IN ('id', 'created_at', 'updated_at', 'created_by_id', 'updated_by_id') THEN concat('Allowed ' , TITLEIZE(column_name), 's', ' for ', TITLEIZE(table_name))
+	WHEN table_name in (select distinct(table_name) from information_schema.columns where column_name = 'name' AND table_schema= 'bjv3_local') THEN concat('Allowed ' , TITLEIZE(column_name), 's', ' for ', TITLEIZE(table_name))
+
+	WHEN column_name in ('age', 'dob', 'grade', 'student_code', 'usi') THEN concat(TITLEIZE(column_name), ' of the associated student')
 END  AS 'Description',
 CASE
 	WHEN table_name = 'rosters' THEN 'Active Student Roster File from SLEDS'
@@ -23,7 +25,7 @@ CASE
 	WHEN table_name = 'sho_reconciliations' THEN 'Daily SHO Reconciliation Import'
 	WHEN table_name = 'student_disabilities' THEN 'Weekly Student Disability Import'
 	WHEN table_name = 'student_merges' THEN 'Student Merge Import from STARS'	
-	WHEN table_name like '%type%' OR table_name like '%group%' OR table_name like '%group%' or table_name = 'delivery_methods' or table_name = 'school_sub_regions'  or table_name = 'hearing_officers' THEN 'Look Up Table'
+	WHEN table_name IN (select distinct(table_name) from information_schema.columns where column_name = 'name' AND table_schema= 'bjv3_local') THEN 'Look Up Table'
 	ELSE 'Information Created/Captured in Blackman Jones'
 END as 'Source',
 is_nullable As 'Can be NULL', 
@@ -70,4 +72,3 @@ END $$
 DELIMITER ;
 
 */
-
